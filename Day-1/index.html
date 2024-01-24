@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(1);
+      console.log(typeof "45");
+      console.log(parseInt("23456789") + parseInt("2"));
+      console.log(parseInt("2A"));
+      console.log(parseInt("A2A")); //NAN
+      console.log(parseInt("2 2A"));
+
+      var arr = [1, 2, 3, 4, 5, 6, "man", true, false];
+      var element = null;
+      for (var index = 0; index < arr.length; index++) {
+        element = arr[index];
+      }
+      console.log(element);
+
+      var obj = {
+        name: "ravi",
+        loaction: "nellore",
+      };
+
+      console.log(obj);
+      //insert
+      obj.phone = 1234;
+      console.log(obj);
+
+      obj["number"] = 1223455;
+      console.log(obj);
+
+      //update
+      obj.name = "kiran";
+      console.log(obj);
+
+      //remove
+      delete obj.loaction;
+    </script>
+  </body>
+</html>
