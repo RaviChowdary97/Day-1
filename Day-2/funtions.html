@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function abc() {
+        console.log("hello");
+      }
+      abc();
+      for (var i = 0; i < 5; i++) {
+        abc(); //invoke 5 times
+      }
+
+      function bcd(a, b, c, name, gfd) {
+        console.log("function with parameters");
+        console.log(a, b, c, name, gfd);
+        var sum = 0;
+        for (var i = 0; i < gfd.length; i++) {
+          sum = sum + gfd[i];
+        }
+        console.log(sum);
+        console.log("my name is ", name);
+      }
+      bcd(1, 2, 3, "ravi", [5, 6, 7, 8]); // arguments
+
+      var english = 90;
+      var maths = 98;
+      var science = 80;
+
+      function add() {
+        var totalMarks = maths + science + english;
+        return totalMarks;
+      }
+      let result = add();
+      console.log(result);
+
+      function percentage(a) {
+        var Percentage = a / 3;
+        console.log(Percentage);
+      }
+      percentage(result);
+
+      //Anonymus function
+      //it is used in windows onject
+
+      var compute = function (a, b) {
+        console.log(a + b);
+      };
+      compute(10, 11);
+
+      //Arrow function
+      //es6
+      let test = () => console.log(1 + 1);
+      test();
+
+      let test2 = () => 1 + 1;
+      console.log(test2());
+
+      let test3 = (a, b) => {
+        var res = a + b;
+        return res;
+      };
+      console.log(test3(1, 3));
+
+      //life function
+      (function (name) {
+        console.log(name);
+      })("ravi");
+    </script>
+  </body>
+</html>

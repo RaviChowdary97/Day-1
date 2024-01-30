@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 10;
+      let b = 12;
+      const c = 13;
+      {
+        console.log(a, b, c);
+      }
+      {
+        var d = 14;
+        let e = 15;
+        const f = 16;
+      }
+      console.log(d);
+      //   console.log(e);
+      //   console.log(f);
+
+      //var function scope
+      function varscope() {
+        var abc = 1234;
+        console.log(abc);
+      }
+      varscope();
+      // console.log(abc); //abc is not defined
+      let bc = 12;
+      let vb = 13;
+      console.log("bc :" + bc + " vb: " + vb);
+
+      //template literals
+      //back tick
+      console.log(`a:${bc} b:${vb}`);
+    </script>
+  </body>
+</html>

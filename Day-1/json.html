@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        key1: "Value",
+        key2: "Value",
+        key3: "Value",
+      };
+      console.log(obj);
+      console.log(Object.keys(obj).length);
+      console.log(Object.values(obj).length);
+
+      //JSON
+
+      var jsonobj = {
+        key: "value",
+        key: "value",
+      };
+      //this converts obj to json string
+      console.log(JSON.stringify(obj));
+      //sending any data to server
+      //understand string
+      // convert your obj to string and send it to the server
+
+      //converts json strings into an object
+      console.log(
+        JSON.parse('{"" key1": "Value", "key2": "Value", "key3": "Value" }')
+      );
+
+      var obj3 = {
+        key1: "value1",
+        key2: "value2",
+      };
+      console.log(obj.key1);
+
+      for (var key in obj3) {
+        // console.log(key)
+        // values
+        console.log(obj3[key]); // undefined
+      }
+
+      // for of
+      var arr5 = [4, 7, 8, 9, 100, 67];
+      var cars = ["89", "90"];
+
+      // for(var index of arr){}
+      for (var value of cars) {
+        console.log(value);
+      }
+    </script>
+  </body>
+</html>

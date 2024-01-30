@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Input(arr, n) {
+        if (n == undefined) {
+          console.log(arr[0]);
+        } else if (n < 0) {
+          console.log([]);
+        } else {
+          console.log(arr.slice(0));
+        }
+      }
+      Input([1, 2, 3]);
+      Input([14, 2, 3, 4], 8);
+      Input([1, 2, 3, 4], -2);
+    </script>
+  </body>
+</html>

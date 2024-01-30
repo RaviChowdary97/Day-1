@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 10;
+      console.log(a);
+      a = 12;
+      console.log(a);
+      var a = 100;
+      console.log(a);
+
+      //undefined => declare variable and don't assign the value
+      var b;
+      console.log(b);
+
+      console.log(c); //undefined
+      var c;
+      //var => declare + redeclare + assignment + hoisting
+
+      let d = 17;
+      console.log(d);
+      d = 19;
+      console.log(d);
+      //let a = 10;
+      console.log(d); // identifier d has alredy been declared
+
+      //   console.log(e); // Cannot access 'e' before initialization
+      //   let e;
+
+      //let => declare + assignment
+
+      const f = 300;
+      console.log(f);
+
+      //   f = 200;
+      //   console.log(f); Uncaught TypeError: Assignment to constant variable
+
+      //   console.log(g);
+      //   const g = 100;  Uncaught ReferenceError: Cannot access 'g' before initialization
+
+      //const =>declare = assigned
+    </script>
+  </body>
+</html>

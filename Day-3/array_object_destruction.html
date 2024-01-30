@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 20, 30, 40];
+      console.log(arr[2]);
+
+      let newarr = ["guvi", "zen", "fsd", "code", "web"];
+      console.log(newarr[3]);
+
+      //destructuring
+      //unpacking of the items
+
+      let [platform, portal, name, where, place] = newarr;
+      console.log(
+        `firstname:${platform} lastname:${portal} name:${name} where:${where} place:${place}`
+      );
+
+      //destructuring of an object
+      let obj = {
+        names: "guvi",
+        age: 23,
+        contactnum: 123456789,
+        email: "abc@gmail.com",
+      };
+
+      console.log(obj);
+
+      let { names, age, contactnum, email } = obj;
+      console.log(names, contactnum, email);
+    </script>
+  </body>
+</html>
