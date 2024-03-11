@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #heading2 {
+        color: blueviolet;
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      console.log(document.URL);
+      //create element
+      var division = document.createElement("div");
+
+      //text|content
+      division.innerText = "Hello World";
+
+      console.log(division);
+
+      document.body.append(division);
+
+      //innerText = text only || innerHTML = HTML TAG + Text
+
+      var para = document.createElement("p");
+      para.innerHTML = "<h1>HELLO WORLD</h1>";
+      console.log(para);
+
+      document.body.append(para);
+
+      var div1 = document.createElement("div");
+      var div2 = document.createElement("div");
+
+      var heading1 = document.createElement("h1");
+      var heading2 = document.createElement("h2");
+      var heading3 = document.createElement("h3");
+
+      heading1.innerText = "Heading 1";
+      heading2.innerText = "Heading 2";
+      heading3.innerText = "Heading 3";
+
+      document.body.append(div1);
+      div1.append(div2);
+      div2.append(heading1, heading2, heading3);
+      //div2.appendChild(heading1, heading2, heading3);
+
+      //adding an attribute = class || id || href || ..etc
+      //setAttribute("attributename", "attributevalue")
+      //add at a time only 1 attribute
+
+      div1.setAttribute("class", "container");
+      heading1.setAttribute("id", "newHeading1");
+      heading2.setAttribute("id", "heading2");
+      heading3.setAttribute("id", "heading3");
+
+      //in case multiple cases
+      //classlist
+      //add
+
+      div2.classList.add("subContainer", "secondConatiner");
+
+      //style
+
+      heading1.style.backgroundColor = "red";
+      heading1.style.color = "yellow";
+    </script>
+  </body>
+</html>

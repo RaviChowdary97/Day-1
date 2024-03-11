@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const p = new Promise(() => {});
+      console.log(p);
+
+      const p1 = new Promise((resolve, reject) => {
+        resolve("I will be there at restuarent at 4PM");
+      });
+      console.log(p1);
+
+      const p2 = new Promise((resolve, reject) => {
+        reject("I will not be there at restuarent at 4PM");
+      }); //error , we have to handle
+      console.log(p2);
+
+      const p3 = new Promise((resolve, reject) => {
+        resolve("I will be there at restuarent at 4PM");
+        reject("I will not be there at restuarent at 4PM");
+      });
+      console.log(p3);
+
+      const p4 = new Promise((resolve, reject) => {
+        reject("I will not be there at restuarent at 4PM");
+        resolve("I will be there at restuarent at 4PM");
+      });
+      console.log(p4);
+
+      let age = 19;
+
+      const p5 = new Promise((resolve, reject) => {
+        if (age > 18) {
+          resolve("I will be there at restuarent at 4PM");
+        } else {
+          reject("I will not be there at restuarent at 4PM");
+        }
+      });
+      console.log(p5);
+
+      let age1 = 17;
+
+      const p6 = new Promise((resolve, reject) => {
+        if (age1 > 18) {
+          resolve("I will be there at restuarent at 4PM");
+        } else {
+          reject("I will not be there at restuarent at 4PM");
+        }
+      });
+      console.log(p6);
+      p6.then((res) => console.log(res)).catch((err) => console.log(err));
+    </script>
+  </body>
+</html>

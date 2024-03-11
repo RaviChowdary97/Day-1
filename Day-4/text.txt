@@ -1,0 +1,2 @@
+ES6 supports oops concept
+class => blueprint/template oƒthe object

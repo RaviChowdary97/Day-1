@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="test"
+      class="card border-warning border-3"
+      style="width: 10rem; height: 120px"
+    ></div>
+
+    <script>
+      let divBox = document.getElementById("test");
+
+      let colarray = ["blue", "green", "yellow", "pink", "crimson"];
+      // let colarray=["bg-primary","bg-secondary","bg-success","bg-danger","bg-warning","bg-info","bg-light","bg-dark","bg-white"]
+      // console.log(Math.floor(Math.random()*colarray.length))
+
+      let id = setInterval(anim, 1000);
+      let a = 0;
+      function anim() {
+        a = a + 20;
+        // console.log(a)
+        divBox.style.marginLeft = a + "px";
+        divBox.innerText = a;
+        divBox.style.color = "white";
+        if (a == 1200) {
+          clearInterval(id);
+        } else {
+          // divBox.classList.remove('bg-dark')
+          let colIndex = Math.floor(Math.random() * colarray.length); // 0-1=> excludes 1 => 0.1 ||0-5(5 exvlude)=> 1||0.4||intger => 0-4 => random
+          console.log(colarray[colIndex]);
+          console.log(typeof colIndex);
+          var randomcol = colarray[colIndex];
+          //49==>27
+          //50==>28
+          divBox.style.backgroundColor = randomcol;
+          // divBox.classList.add(randomcol)
+        }
+      }
+    </script>
+  </body>
+</html>

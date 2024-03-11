@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let age = 19;
+      const p5 = new Promise((resolve, reject) => {
+        if (age > 18) {
+          resolve("I will be there at restuarent at 4PM");
+        } else {
+          reject("I will not be there at restuarent at 4PM");
+        }
+      });
+      // console.log(p5);
+
+      const p6 = new Promise((resolve, reject) => {
+        if (age > 18) {
+          setTimeout(() => {
+            resolve("I will be there at restuarent at 4PM");
+          }, 2000);
+        } else {
+          reject("I will not be there at restuarent at 4PM");
+        }
+      });
+      // console.log(p6);
+
+      const p7 = new Promise((resolve, reject) => {
+        if (age > 18) {
+          setTimeout(() => {
+            resolve("I will be there at restuarent at 4PM");
+          }, 4000);
+        } else {
+          reject("I will not be there at restuarent at 4PM");
+        }
+      });
+      //console.log(p7);
+      //   p5.then(res=>console.log(res)).catch(err=>console.log(err))
+      //   p6.then(res=>console.log(res)).catch(err=>console.log(err))
+      //   p7.then(res=>console.log(res)).catch(err=>console.log(err))
+
+      //OR
+      //PromiseAll
+      Promise.all([p5, p6, p7])
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>

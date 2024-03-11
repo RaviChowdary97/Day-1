@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="test"></div>
+    <button onclick="stopAnim()" id="btn">Stop Animation</button>
+    <script>
+      var div = setTimeout(delay, 3000);
+      function delay() {
+        var main = document.getElementById("test");
+        main.style.backgroundColor = "yellow";
+        main.innerText = "This is div tag";
+      }
+
+      //clearTimeout
+
+      function stopAnim() {
+        // animation stopped
+        //clear timer
+        clearTimeout(div);
+        // crean an element
+        // innertext : animation stopped successfullt
+      }
+    </script>
+  </body>
+</html>

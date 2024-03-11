@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var req = fetch("https://restcountries.com/v2/all");
+      console.log(req);
+
+      //   req
+      //     .then((res) => {
+      //       console.log(res);
+      //       return res;                  //return the response
+      //     })
+      //     .then((data) => {
+      //       console.log(data);
+      //       return data.json();             //promise => return the array 250 + convert into json
+      //       //  console.log(data.json());
+      //     })
+      //     .then((country) => console.log(country));      //printing the data
+
+      //OR
+
+      req
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err));
+      let cityname = "London";
+      let apiKey = `6aa9ad05a089017ae6f32c943d635190`;
+      var url = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}`;
+      var req1 = fetch(url);
+
+      req1
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>

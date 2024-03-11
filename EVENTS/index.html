@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="btnClick(event)">Click Me</button>
+    <button id="btn1">Click Me</button>
+    <p id="test"></p>
+
+    <input type="text" name="" oninput="display(event)" value="" />
+    <input type="text" name="" id="input1" oninput="display(event)" value="" />
+
+    <script>
+      let testpara = document.getElementById("test");
+      function btnClick(event) {
+        console.log(event.target);
+        console.log("button clicked");
+        console.log(event.target.innerHTML);
+        testpara.innerText = "This is p Tag";
+        testpara.style.backgroundColor = "green";
+      }
+
+      //OR
+
+      let btn1 = document.getElementById("btn1");
+
+      console.log(btn1);
+      btn1.addEventListener("click", () => {
+        console.log("Buton clicked");
+        testpara.innerHTML = `<h1>Click Event</h1>`;
+        testpara.style.backgroundColor = "red";
+      });
+
+      function display(event) {
+        console.log(event.target.value);
+        testpara.innerText = event.target.value;
+        testpara.style.backgroundColor = "green";
+        testpara.style.padding = "20px";
+      }
+      //OR
+      input1.addEventListener("input", (event) => {
+        testpara.innerText = event.target.value;
+        testpara.style.backgroundColor = "red";
+        testpara.style.padding = "20px";
+      });
+    </script>
+  </body>
+</html>

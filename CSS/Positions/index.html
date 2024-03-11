@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .static {
+        position: static;
+        background-color: yellow;
+        height: 100px;
+        width: 170px;
+      }
+      .relative {
+        position: relative;
+        background-color: yellow;
+        height: 100px;
+        width: 170px;
+        left: 250px;
+      }
+      .absoluteChild {
+        border: 2px green solid;
+        height: 100px;
+        width: 170px;
+        background-color: red;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+      }
+      .absoluteParent {
+        border: 2px solid blue;
+        height: 100px;
+        width: 170px;
+        background-color: chartreuse;
+        position: relative;
+      }
+      .sticky {
+        position: sticky;
+        background-color: yellow;
+        height: 80px;
+        width: 170px;
+        top: 10px;
+      }
+      .fixed {
+        border: 2px solid yellow;
+        width: 200px;
+        height: 100px;
+        background-color: yellowgreen;
+        position: fixed;
+        top: 40px;
+        text-decoration: line-through red wavy;
+        text-shadow: 5px 5px 2px rgb(253, 250, 250);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sticky">This is sticky property</div>
+    <br />
+    <div class="static">This is static property</div>
+    <br />
+    <div class="relative">This is relative property</div>
+    <br />
+
+    <div class="absoluteParent">
+      <div class="absoluteChild">This is absolute property</div>
+    </div>
+    <div class="absoluteParent">
+      <div class="absoluteChild">This is absolute property</div>
+    </div>
+    <div class="absoluteParent">
+      <div class="absoluteChild">This is absolute property</div>
+    </div>
+    <div class="absoluteParent">
+      <div class="absoluteChild">This is absolute property</div>
+    </div>
+    <div class="absoluteParent">
+      <div class="absoluteChild">This is absolute property</div>
+    </div>
+    <div class="fixed">This is fixed properity</div>
+    <br />
+  </body>
+</html>

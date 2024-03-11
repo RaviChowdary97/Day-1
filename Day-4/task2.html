@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class uber {
+        constructor(km) {
+          this.km = km;
+          this.price = km * 3;
+        }
+        getPrice() {
+          console.log(`Ride cost is : ${this.price}`);
+        }
+        applyDiscount() {
+          console.log("Discount calculations");
+          let discount = (25 / this.price) * 100;
+          let priceAfterDiscount = this.price - discount;
+          console.log(
+            `As a priveliged customer, i got discount after ride :${priceAfterDiscount.toFixed()}`
+          );
+        }
+      }
+      let rider = new uber(20);
+      rider.getPrice();
+      rider.applyDiscount();
+    </script>
+  </body>
+</html>

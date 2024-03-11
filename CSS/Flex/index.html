@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        border: 2px solid red;
+        height: 500px;
+        width: 300pxpx;
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+        /* flex-flow: nowrap column; */
+        align-items: center;
+        justify-content: center;
+        /* align-content: space-between; */
+      }
+      .item1 {
+        background-color: yellow;
+        height: 60px;
+        width: 70px;
+        border: 2px solid black;
+        order: -1;
+        align-self: flex-start;
+        flex-grow: 1;
+      }
+      .item2 {
+        background-color: yellow;
+        height: 60px;
+        width: 70px;
+        border: 2px solid black;
+        flex-shrink: 1;
+      }
+      .item3 {
+        background-color: yellow;
+        height: 60px;
+        width: 70px;
+        border: 2px solid black;
+      }
+      .item4 {
+        background-color: yellow;
+        height: 60px;
+        width: 70px;
+        border: 2px solid black;
+      }
+      .item5 {
+        background-color: yellow;
+        height: 60px;
+        width: 70px;
+        border: 2px solid black;
+      }
+      .item6 {
+        background-color: yellow;
+        height: 60px;
+        width: 70px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item1">item1</div>
+      <div class="item2">item2</div>
+      <div class="item3">item3</div>
+      <div class="item4">item4</div>
+      <div class="item5">item5</div>
+      <div class="item6">item6</div>
+    </div>
+  </body>
+</html>

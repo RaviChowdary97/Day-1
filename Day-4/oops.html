@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class car {
+        constructor(name, year) {
+          console.log("constructor");
+          this.name = name;
+          this.year = year;
+          console.log(this.name, this.year);
+        }
+        getDetails() {
+          console.log("Hello world");
+          console.log(name);
+          console.log(this.name);
+        }
+        getNewDetails() {
+          console.log(
+            `Current car i won:${this.name} and i purchased in a year:${this.year}`
+          );
+        }
+      }
+
+      let s = new car("BMW", 2002);
+      console.log(s);
+      console.log(s.year);
+
+      let s1 = new car("Ferari", 2004);
+      console.log(s1);
+
+      s.getDetails();
+      s1.getDetails();
+      s1.getNewDetails();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [10, 20, 30, 40, 50];
+
+      var output = [];
+      for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+        output.push(arr[i]);
+      }
+      console.log(output);
+
+      console.log("Map Method");
+      arr.map((element, index) => console.log(element));
+      let str = arr.map((element, index) => element);
+      console.log(str);
+
+      let str1 = arr.map((element, index) => element * 2);
+      console.log(str1);
+
+      //index
+      let str3 = arr.map((element, index) => console.log(element, index));
+
+      //adding index and element
+      let str4 = arr.map((element, index) => console.log(element + index));
+
+      let str5 = arr.map((element, index) => element * 2 + index);
+      console.log(str5);
+
+      //array of objects
+      var arrObj = [
+        { key: 1, value: 10 },
+        { key: 2, value: 20 },
+        { key: 3, value: 30 },
+      ];
+
+      //let str6 = arrObj.map((element, index) => element.value);
+      let str6 = arrObj.map(({ key, value }) => value);
+      console.log(str6);
+
+      //Filter method
+      console.log("FILTER METHOD");
+      var arr = [10, 20, 30, 40, 50];
+      let res = arr.filter((element, index) => element % 2 == 0);
+      console.log(res);
+
+      let words = ["guvi", "youtube", "zen", "fsd", "mern"];
+
+      let res1 = words.filter((element, index) => element.length > 3);
+      console.log(res1);
+
+      var students = [
+        { name: "Bob", marks: 10 },
+        { name: "Rob", marks: 20 },
+        { name: "Mat", marks: 30 },
+        { name: "Tim", marks: 40 },
+        { name: "will", marks: 50 },
+      ];
+
+      let res2 = students.map((element) => element);
+      console.log(res2);
+
+      let res3 = students.map(({ name, marks }) => marks);
+      console.log(res3);
+
+      let res4 = students.filter(({ name, marks }) => marks > 10);
+      console.log(res4);
+
+      console.log(res4.map((element) => element.marks));
+      let names = res4.map((element) => element.name);
+      console.log(...names);
+
+      console.log("REDUCE METHOD");
+      var arr = [10, 20, 30, 40, 50];
+
+      //without acc value
+      let main = arr.reduce((acc, cv) => acc + cv);
+      console.log(main);
+
+      //with acc value
+      let main1 = arr.reduce((acc, cv) => acc + cv, 100);
+      console.log(main1);
+
+      var students = [
+        { name: "Bob", marks: 10 },
+        { name: "Rob", marks: 20 },
+        { name: "Mat", marks: 30 },
+        { name: "Tim", marks: 40 },
+        { name: "will", marks: 50 },
+      ];
+
+      let main2 = students.reduce((acc, { marks }) => acc + marks, 0);
+      console.log(main2);
+
+      let arr1 = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+
+      let main3 = arr1.map((element) => Math.sqrt(element));
+      console.log(main3);
+
+      let main4 = main3.filter((element) => element % 2 == 0);
+      console.log(main4);
+
+      let main5 = main4.reduce((acc, cv) => acc + cv, 0);
+      console.log(main5);
+    </script>
+  </body>
+</html>

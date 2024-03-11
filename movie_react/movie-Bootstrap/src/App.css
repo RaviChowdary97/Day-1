@@ -1,0 +1,31 @@
+/* .movieContainer {
+  height: 430px;
+  width: 295px;
+  border: 1px solid red;
+  margin-bottom: 2%;
+  margin-top: 1%;
+  margin-left: 7px;
+  border-radius: 5%;
+}
+.moviePoster {
+  height: 300px;
+  width: 295px;
+  border-radius: 5%;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.movieSummary {
+  overflow: hidden;
+  height: 75px;
+}
+.movieSpecs {
+  display: flex;
+  justify-content: space-between;
+}
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+} */

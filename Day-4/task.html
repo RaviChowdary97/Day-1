@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class person {
+        constructor(name, age, gender, number) {
+          this.name = name;
+          this.age = age;
+          this.gender = gender;
+          this.number = number;
+        }
+        personDetails() {
+          console.log(`myname is :${this.name}`);
+          console.log(`my age is :${this.age}`);
+          console.log(`my geneder is :${this.gender}`);
+          console.log(`my number is :${this.number}`);
+        }
+      }
+      let ps = new person("bob", 22, "male", 12345);
+      ps.personDetails();
+    </script>
+  </body>
+</html>

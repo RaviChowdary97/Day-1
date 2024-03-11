@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let url = ` https://65decd10ff5e305f32a07c1f.mockapi.io/User`;
+      async function getData() {
+        let res = await fetch(url);
+        let data = await res.json();
+        console.log(data);
+      }
+      getData();
+
+      async function createUser() {
+        let newUser = {
+          name: "New User",
+          email: "newUser@gmail.com",
+        };
+        let res = await fetch(url, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(newUser),
+        });
+      }
+      // createUser();
+
+      //getting a specific user
+      let userId = 2;
+      console.log(`${url}/${userId}`);
+      async function getSpecificData() {
+        let res = await fetch(`${url}/${userId}`);
+        let data = await res.json();
+        console.log(data);
+      }
+      getSpecificData();
+
+      //DELETE
+
+      let deleteUserId = 4;
+      console.log(`${url}/${deleteUserId}`);
+      try {
+        async function deleteUser() {
+          let res = await fetch(`${url}/${deleteUserId}`, {
+            method: "DELETE",
+          });
+          let data = await res.json();
+          console.log(data);
+        }
+        // deleteUser();
+      } catch (e) {
+        console.log(e);
+      }
+
+      //UPDATE
+      let UpdateUserId = 5;
+      console.log(`${url}/${UpdateUserId}`);
+
+      async function UpdateUser() {
+        let updateDetail = {
+          name: "Mr. Guvi",
+          email: "guvi@gmail.com",
+        };
+        let res = await fetch(`${url}/${UpdateUserId}`, {
+          method: "PUT",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(updateDetail),
+        });
+
+        let data = await res.json();
+        console.log(data);
+      }
+      UpdateUser();
+    </script>
+  </body>
+</html>

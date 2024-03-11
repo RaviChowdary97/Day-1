@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div > p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is child combinator -->
+    <div>
+      <div>Not applied</div>
+      <p>green color applied</p>
+      <div>Not applied</div>
+      <article>
+        <p>green color not applied</p>
+      </article>
+      <p>green color applied</p>
+    </div>
+  </body>
+</html>
