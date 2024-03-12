@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Counter } from "./Counter";
 import { useNavigate } from "react-router-dom";
-export const MovieCard = ({ name, poster, rating, summary, id }) => {
-  // console.log("Id is ",id)
+export const MovieCard = ({ name, poster, rating, summary }) => {
   const navigate = useNavigate();
   const [show, setShow] = useState(true);
   const ratingStyle = {
@@ -11,9 +10,9 @@ export const MovieCard = ({ name, poster, rating, summary, id }) => {
   };
 
   return (
-    <>
+    <div className="App1">
       <div
-        className="card m-1 ms-2 bg-dark text-white"
+        className="card m-1 ms-2"
         style={{ width: "19rem", height: "480px" }}
       >
         <img
@@ -27,9 +26,7 @@ export const MovieCard = ({ name, poster, rating, summary, id }) => {
             <div className="d-flex">
               <h6 className="card-title">{name}</h6>
               <h6 onClick={() => setShow(!show)}>{show ? "🔽" : "🔼"}</h6>
-
-              {/* Trailer of a movie will be displayed here */}
-              <h6 onClick={() => navigate(`/movies/${id}`)}>ℹ</h6>
+              <h6 onClick={() => navigate(`/movies/${id}`)}>iii</h6>
             </div>
             <div style={ratingStyle}>{rating}</div>
           </div>
@@ -41,9 +38,6 @@ export const MovieCard = ({ name, poster, rating, summary, id }) => {
           <Counter />
         </div>
       </div>
-    </>
+    </div>
   );
 };
-
-//useNavigate Hook
-// url/xyz

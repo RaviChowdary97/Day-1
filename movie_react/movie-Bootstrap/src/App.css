@@ -24,8 +24,14 @@
   display: flex;
   justify-content: space-between;
 }
-.App {
+ .App {
   display: flex;
   flex-wrap: wrap;
   gap: 3px;
-} */
+}  */
+.App {
+  background-color: rgba(39, 194, 194, 0.808);
+}
+.App1 {
+  background-color: aquamarine;
+}
